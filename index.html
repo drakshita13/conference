@@ -1,180 +1,736 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>When Bilateral Effusion Isn’t Malignancy — Case Study | Dr. Akshita Khare</title>
-  <meta name="description" content="Case study: When Bilateral Effusion Isn’t Malignancy — Systemic Amyloidosis presenting as bilateral pleural effusion. Dr. Akshita Khare, SAIMS Indore.">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:ital,wght@0,700;1,700&display=swap');
-    :root{
-      --maroon:#4E2F3D;
-      --gold:#D2C3A9;
-      --muted:#666975;
-      --bg:#fbfbfc;
-      --card:#ffffff;
-      --rule:#e6e6ea;
-    }
-    *{box-sizing:border-box}
-    body{font-family:'Lato',system-ui,Segoe UI,Roboto,Arial; margin:0; color:#1f2937; background:linear-gradient(180deg,#fbfbfc 0%,#ffffff 100%);}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Case Study - Systemic Amyloidosis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* HERO / COVER */
-    .hero{background:linear-gradient(180deg, rgba(78,47,61,0.96), rgba(78,47,61,0.88)); color:white; padding:64px 20px; text-align:center;}
-    .hero .container{max-width:1100px; margin:0 auto;}
-    h1{font-family:'Merriweather', Georgia, serif; font-size:34px; margin:0 0 8px; line-height:1.05; letter-spacing:-0.02em;}
-    .subtitle{font-size:18px; color:rgba(255,255,255,0.9); margin-bottom:16px;}
-    .meta{font-size:14px; opacity:0.95; margin-top:8px;}
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            background: #ffffff;
+            color: #2d3748;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    /* LAYOUT */
-    .wrap{max-width:1100px; margin:28px auto; padding:0 20px 80px;}
-    .card{background:var(--card); border-radius:12px; padding:22px; box-shadow:0 14px 32px rgba(15,23,42,0.06); border:1px solid var(--rule); margin-bottom:20px;}
-    .row{display:flex; gap:20px; align-items:flex-start; flex-wrap:wrap;}
-    .col-1{flex:1 1 56%; min-width:280px;}
-    .col-2{flex:1 1 40%; min-width:220px;}
-    h2{font-family:'Merriweather', Georgia, serif; color:var(--maroon); margin:0 0 8px; font-size:22px;}
-    p{margin:8px 0; color:var(--muted); font-size:15px; line-height:1.5;}
-    ul{margin:6px 0 0 18px; color:var(--muted);}
+        /* Individual Slides */
+        .slide {
+            min-height: 100vh;
+            padding: 4rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-    /* ICONS */
-    .icon{width:56px; height:56px; display:inline-flex; align-items:center; justify-content:center; border-radius:10px; background:linear-gradient(180deg,rgba(78,47,61,0.06),rgba(210,195,169,0.04)); margin-right:12px;}
+        .slide:last-child {
+            border-bottom: none;
+        }
 
-    /* HIGHLIGHT */
-    .hl{color:var(--maroon); font-weight:700; font-style:italic; background:linear-gradient(90deg, rgba(210,195,169,0.12), rgba(78,47,61,0.02)); padding:4px 8px; border-radius:6px;}
+        /* Title Slide */
+        .title-slide {
+            background: linear-gradient(135deg, #1a365d 0%, #2d5a87 50%, #4a90e2 100%);
+            color: white;
+            text-align: center;
+            justify-content: space-between;
+            padding: 6rem 3rem;
+        }
 
-    /* INFO BOX */
-    .info{background:linear-gradient(90deg, rgba(210,195,169,0.06), rgba(78,47,61,0.02)); padding:14px; border-radius:10px; border:1px solid rgba(226,232,240,0.6); color:var(--maroon); font-weight:600;}
+        .title-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    /* GRID LIST */
-    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:12px;}
-    .small{font-size:13px; color:#475569;}
+        .medical-symbol {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
 
-    /* FOOTER */
-    footer{max-width:1100px; margin:36px auto 80px; padding:20px; text-align:center; color:var(--muted); font-size:14px;}
+        .main-title {
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+            max-width: 900px;
+        }
 
-    /* Responsive */
-    @media (max-width:900px){ .col-1,.col-2{flex:1 1 100%} .grid-3{grid-template-columns:repeat(1,1fr);} h1{font-size:28px} .icon{width:48px;height:48px} }
-  </style>
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.85;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .author-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem 3rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .author-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-title {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .institution {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        /* Content Slides */
+        .slide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .slide-number {
+            display: inline-block;
+            background: #4a90e2;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.5px;
+        }
+
+        .slide-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 1rem;
+        }
+
+        .slide-subtitle {
+            font-size: 1.1rem;
+            color: #4a5568;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .content-text {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #2d3748;
+            margin-bottom: 2rem;
+            text-align: justify;
+        }
+
+        .highlight {
+            background: #e6f3ff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1a365d;
+        }
+
+        /* Patient Profile Card */
+        .patient-card {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .patient-card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1a365d;
+            margin-bottom: 1.5rem;
+        }
+
+        .patient-description {
+            font-size: 1.1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Clinical Cards Grid */
+        .clinical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .clinical-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease;
+        }
+
+        .clinical-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: #1a365d;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-content {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card-content li {
+            padding: 0.4rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .card-content li::before {
+            content: '▪';
+            position: absolute;
+            left: 0;
+            color: #4a90e2;
+            font-weight: bold;
+        }
+
+        /* Investigation Timeline */
+        .investigation-list {
+            margin: 2rem 0;
+        }
+
+        .investigation-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .investigation-title {
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .investigation-result {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #1a365d 0%, #4a90e2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            text-align: center;
+        }
+
+        .highlight-box-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* Clinical Pearls */
+        .pearls-section {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+
+        .pearls-title {
+            color: #1a365d;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pearls-icon {
+            margin-right: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .pearls-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .pearl-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+            font-size: 1.05rem;
+            color: #2d3748;
+            font-weight: 500;
+        }
+
+        /* Conclusion Slide */
+        .conclusion-slide {
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .conclusion-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .conclusion-text {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+        }
+
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .takeaway-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .takeaway-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .takeaway-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Navigation */
+        .slide-navigation {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: rgba(26, 54, 93, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
+            border-radius: 50px;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 1000;
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: #4a90e2;
+            transform: scale(1.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 2rem 1.5rem;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .slide-title {
+                font-size: 1.8rem;
+            }
+
+            .clinical-grid, .takeaways-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .author-section {
+                padding: 2rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .slide {
+                page-break-inside: avoid;
+                page-break-after: always;
+                min-height: auto;
+                padding: 2rem;
+            }
+
+            .slide-navigation {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header class="hero" aria-label="cover">
-    <div class="container">
-      <div style="max-width:880px; margin:0 auto;">
-        <h1>When Bilateral Effusion Isn’t Malignancy</h1>
-        <div class="subtitle"><span class="hl">A Rare Case of Systemic Amyloidosis</span></div>
-        <div class="meta"><strong>Dr. Akshita Khare</strong> — MD (Respiratory Medicine), 2<sup>nd</sup> Year Resident • Department of Respiratory Medicine & TB, SAIMS, Indore • <a href="mailto:akhare13@gmail.com" style="color:rgba(255,255,255,0.95)">akhare13@gmail.com</a></div>
-      </div>
+    <!-- Title Slide -->
+    <section class="slide title-slide" id="slide-1">
+        <div class="title-content">
+            <div class="medical-symbol">⚕️</div>
+            <h1 class="main-title">When Bilateral Effusion Isn't Malignancy:<br>A Rare Case of Systemic Amyloidosis</h1>
+            <p class="subtitle">Advanced Diagnostic Case Study in Respiratory Medicine</p>
+        </div>
+        
+        <div class="author-section">
+            <div class="author-name">Dr. Akshita Khare</div>
+            <div class="author-title">MD Resident, Pulmonary Medicine (2nd Year)</div>
+            <div class="institution">Shri Aurobindo Institute of Medical Sciences<br>Department of Respiratory Medicine, Indore</div>
+        </div>
+    </section>
+
+    <!-- Background Slide -->
+    <section class="slide" id="slide-2">
+        <div class="slide-header">
+            <span class="slide-number">01</span>
+            <h2 class="slide-title">Background</h2>
+            <p class="slide-subtitle">Clinical Context & Diagnostic Challenge</p>
+        </div>
+        
+        <div class="slide-content">
+            <div class="content-text">
+                Bilateral pleural effusion in adults most commonly arises from <span class="highlight">malignancy, tuberculosis, or congestive cardiac failure</span>. In the absence of fever or infective markers, diagnostic focus shifts towards neoplastic or systemic causes.
+            </div>
+            
+            <div class="content-text">
+                <span class="highlight">Amyloidosis</span>, a rare disorder characterized by extracellular deposition of misfolded amyloid fibrils, is seldom considered early in the differential diagnosis. Pleural involvement in amyloidosis is unusual and often mimics more prevalent pathologies, leading to significant diagnostic delays.
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">Key Clinical Challenge</div>
+                <div class="highlight-box-text">
+                    This case exemplifies the diagnostic challenge posed by rare systemic diseases presenting with common clinical manifestations, emphasizing the critical importance of systematic evaluation when initial investigations remain inconclusive.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Presentation Slide -->
+    <section class="slide" id="slide-3">
+        <div class="slide-header">
+            <span class="slide-number">02</span>
+            <h2 class="slide-title">Case Presentation</h2>
+            <p class="slide-subtitle">Patient Profile & Clinical Features</p>
+        </div>
+        
+        <div class="slide-content">
+            <div class="patient-card">
+                <h3 class="patient-card-title">Patient Profile</h3>
+                <p class="patient-description">Adult male with progressive exertional dyspnea of 6 months duration, accompanied by bilateral pleural effusion with left-sided predominance, anorexia, and significant weight loss.</p>
+            </div>
+
+            <div class="clinical-grid">
+                <div class="clinical-card">
+                    <div class="card-title">Clinical Presentation</div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Progressive exertional dyspnea (6-month duration)</li>
+                            <li>Bilateral pleural effusion (left > right)</li>
+                            <li>Anorexia with unintentional weight loss</li>
+                            <li>Chronic, insidious onset</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="clinical-card">
+                    <div class="card-title">Notable Absence</div>
+                    <div class="card-content">
+                        <ul>
+                            <li>No fever or constitutional symptoms</li>
+                            <li>No chest pain or pleuritic symptoms</li>
+                            <li>No hemoptysis or productive cough</li>
+                            <li>No orthopnea or paroxysmal dyspnea</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="clinical-card">
+                    <div class="card-title">Previous Evaluation</div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Multiple diagnostic thoracocenteses performed</li>
+                            <li>Transudative pleural fluid obtained</li>
+                            <li>Cytological analysis: inconclusive results</li>
+                            <li>Temporary symptomatic relief only</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnostic Journey Slide -->
+    <section class="slide" id="slide-4">
+        <div class="slide-header">
+            <span class="slide-number">03</span>
+            <h2 class="slide-title">Diagnostic Journey</h2>
+            <p class="slide-subtitle">Sequential Investigation & Key Findings</p>
+        </div>
+        
+        <div class="slide-content">
+            <div class="highlight-box">
+                <div class="highlight-box-title">Diagnostic Challenge</div>
+                <div class="highlight-box-text">
+                    Recurrent bilateral pleural effusion with non-diagnostic pleural fluid analysis in the absence of obvious malignancy or cardiac failure necessitated comprehensive systemic evaluation.
+                </div>
+            </div>
+
+            <div class="investigation-list">
+                <div class="investigation-item">
+                    <div class="investigation-title">Chest HRCT</div>
+                    <div class="investigation-result">Confirmed bilateral pleural effusions without evidence of parenchymal lesions, mediastinal lymphadenopathy, or obvious malignant process</div>
+                </div>
+                
+                <div class="investigation-item">
+                    <div class="investigation-title">2D Echocardiography</div>
+                    <div class="investigation-result">Revealed characteristic features of restrictive cardiomyopathy with preserved ejection fraction but impaired diastolic function</div>
+                </div>
+                
+                <div class="investigation-item">
+                    <div class="investigation-title">Cardiac MRI</div>
+                    <div class="investigation-result">Demonstrated diffuse myocardial infiltration with characteristic enhancement patterns highly suggestive of infiltrative cardiomyopathy</div>
+                </div>
+                
+                <div class="investigation-item">
+                    <div class="investigation-title">Definitive Diagnosis</div>
+                    <div class="investigation-result">Comprehensive hematological and histopathological evaluation confirmed systemic AL amyloidosis with cardiac and pleural involvement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discussion Slide -->
+    <section class="slide" id="slide-5">
+        <div class="slide-header">
+            <span class="slide-number">04</span>
+            <h2 class="slide-title">Clinical Discussion</h2>
+            <p class="slide-subtitle">Pathophysiology & Diagnostic Insights</p>
+        </div>
+        
+        <div class="slide-content">
+            <div class="content-text">
+                In contemporary respiratory medicine practice, recurrent bilateral pleural effusion typically suggests <span class="highlight">malignancy, tubercular etiology, or cardiac dysfunction</span>. Amyloidosis represents a <span class="highlight">rare but critical differential diagnosis</span>, particularly when routine cytological and biochemical analyses remain inconclusive despite repeated evaluations.
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-box-title">Pathophysiological Mechanism</div>
+                <div class="highlight-box-text">
+                    Pleural effusion in amyloidosis results from direct pleural amyloid infiltration, impaired lymphatic drainage, or secondary to restrictive cardiomyopathy with elevated filling pressures.
+                </div>
+            </div>
+
+            <div class="content-text">
+                This case demonstrates the pivotal role of <span class="highlight">advanced cardiac imaging modalities</span>, particularly <span class="highlight">cardiac MRI</span>, in identifying infiltrative diseases. The systematic approach to diagnosis underscores the necessity of maintaining a comprehensive differential diagnosis in atypical presentations of common clinical syndromes.
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinical Pearls Slide -->
+    <section class="slide" id="slide-6">
+        <div class="slide-header">
+            <span class="slide-number">05</span>
+            <h2 class="slide-title">Clinical Pearls</h2>
+            <p class="slide-subtitle">Key Learning Points</p>
+        </div>
+        
+        <div class="slide-content">
+            <div class="pearls-section">
+                <div class="pearls-title">
+                    <span class="pearls-icon">💎</span>
+                    Essential Clinical Insights
+                </div>
+                
+                <div class="pearls-grid">
+                    <div class="pearl-item">Consider amyloidosis in unexplained bilateral pleural effusion when common causes are excluded</div>
+                    <div class="pearl-item">Cardiac MRI provides crucial diagnostic insights in suspected infiltrative cardiomyopathy</div>
+                    <div class="pearl-item">Multidisciplinary evaluation is essential for rare systemic diseases</div>
+                    <div class="pearl-item">Early recognition significantly impacts therapeutic outcomes and prognosis</div>
+                    <div class="pearl-item">Systematic persistence in diagnostic evaluation leads to accurate diagnosis in complex cases</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Slide -->
+    <section class="slide conclusion-slide" id="slide-7">
+        <div class="slide-content">
+            <h2 class="conclusion-title">Clinical Conclusion</h2>
+            <p class="conclusion-text">
+                Systemic amyloidosis must be considered in the differential diagnosis of non-resolving bilateral pleural effusion, particularly when infectious and malignant etiologies have been systematically excluded. Early recognition through multidisciplinary evaluation and advanced imaging is crucial, as diagnostic delays significantly impact prognosis in amyloidosis with cardiac involvement.
+            </p>
+            
+            <div class="takeaways-grid">
+                <div class="takeaway-card">
+                    <div class="takeaway-title">Diagnostic Vigilance</div>
+                    <div class="takeaway-text">Maintain comprehensive differential diagnosis when common causes are systematically excluded</div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-title">Advanced Imaging Utility</div>
+                    <div class="takeaway-text">Cardiac MRI is indispensable for detecting infiltrative cardiomyopathy in suspected systemic diseases</div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-title">Early Recognition Impact</div>
+                    <div class="takeaway-text">Timely diagnosis enables appropriate subspecialty management and significantly improves patient outcomes</div>
+                </div>
+                <div class="takeaway-card">
+                    <div class="takeaway-title">Multidisciplinary Approach</div>
+                    <div class="takeaway-text">Complex systemic diseases require collaborative evaluation involving multiple medical specialties</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navigation -->
+    <div class="slide-navigation">
+        <div class="nav-dot active" onclick="goToSlide(1)"></div>
+        <div class="nav-dot" onclick="goToSlide(2)"></div>
+        <div class="nav-dot" onclick="goToSlide(3)"></div>
+        <div class="nav-dot" onclick="goToSlide(4)"></div>
+        <div class="nav-dot" onclick="goToSlide(5)"></div>
+        <div class="nav-dot" onclick="goToSlide(6)"></div>
+        <div class="nav-dot" onclick="goToSlide(7)"></div>
     </div>
-  </header>
 
-  <main class="wrap" role="main">
-    <!-- Abstract -->
-    <section class="card" id="abstract" aria-labelledby="abstract-heading">
-      <div class="row">
-        <div class="col-1">
-          <h2 id="abstract-heading">Abstract</h2>
-          <p><strong>Background:</strong> Bilateral pleural effusion is commonly due to malignancy, tuberculosis, or congestive cardiac failure. In afebrile patients with recurrent, non‑diagnostic pleural fluid, rare systemic causes such as <span class="hl">systemic amyloidosis</span> must be considered. Amyloidosis is an infiltrative disorder characterized by extracellular deposition of misfolded amyloid fibrils and may involve pleura and myocardium.</p>
-          <p><strong>Case summary:</strong> A —year-old male with progressive exertional dyspnea (5–6 months), anorexia, and weight loss presented with bilateral pleural effusion (L&gt;R). Multiple outside thoracocenteses were non-diagnostic. At our center, HRCT chest excluded parenchymal mass; 2D-ECHO suggested restrictive physiology and cardiac MRI revealed diffuse myocardial infiltration. Targeted testing confirmed <strong>systemic amyloidosis</strong> with cardiac and pleural involvement.</p>
-        </div>
-        <div class="col-2">
-          <div class="info">Key message: <span style="font-weight:700">Consider infiltrative systemic disease (amyloidosis) in persistent, afebrile bilateral pleural effusions with inconclusive cytology.</span></div>
-          <div style="height:16px"></div>
-          <div class="small"><strong>Keywords:</strong> bilateral pleural effusion · systemic amyloidosis · restrictive cardiomyopathy · cardiac MRI · diagnostic reasoning</div>
-        </div>
-      </div>
-    </section>
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 7;
 
-    <!-- Case Presentation -->
-    <section class="card" id="case">
-      <div class="row">
-        <div class="col-1">
-          <h2><span class="icon" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M6 3c0 3 0 5 2 7s2 4 2 7" stroke="#4E2F3D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 3c0 3 0 5-2 7s-2 4-2 7" stroke="#4E2F3D" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 13v8" stroke="#D2C3A9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Case Presentation</h2>
-          <p><strong>Presenting complaint:</strong> Progressive dyspnea on exertion (5–6 months); bilateral pleural effusions (L&gt;R); anorexia and weight loss; afebrile.</p>
-          <p><strong>Prior care:</strong> Multiple diagnostic thoracocenteses performed elsewhere — non-diagnostic cytology; symptomatic therapy with persistent symptoms.</p>
-          <p><strong>Examination:</strong> Dullness to percussion and reduced breath sounds at bilateral bases (L&gt;R); clinically hemodynamically stable.</p>
-        </div>
-        <div class="col-2">
-          <div class="info">Clinical cue: Afebrile + recurrent <strong>bilateral</strong> effusion + negative cytology → broaden differential beyond TB/malignancy.</div>
-          <div style="height:12px"></div>
-          <div class="card small">
-            <strong>Demographics:</strong><br>— Age: — years (insert)<br>— Sex: Male<br>— Relevant PMH: insert<br>— Medications: insert
-          </div>
-        </div>
-      </div>
-    </section>
+        function goToSlide(slideNumber) {
+            currentSlide = slideNumber;
+            document.getElementById(`slide-${slideNumber}`).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+            updateNavigation();
+        }
 
-    <!-- Investigations -->
-    <section class="card" id="investigations">
-      <h2><span class="icon" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <rect x="3" y="4" width="18" height="12" rx="2" stroke="#4E2F3D" stroke-width="1.4"/><path d="M7 16v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2" stroke="#D2C3A9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Investigations & Findings</h2>
-      <div class="row" style="margin-top:12px;">
-        <div class="col-1">
-          <h3 style="margin:0 0 6px 0; font-size:16px; color:var(--maroon)">Imaging</h3>
-          <ul>
-            <li><strong>HRCT Chest:</strong> bilateral pleural effusions; no parenchymal mass or mediastinal lymphadenopathy.</li>
-            <li><strong>2D-Echocardiography:</strong> features suggestive of restrictive cardiomyopathy.</li>
-            <li><strong>Cardiac MRI:</strong> diffuse myocardial infiltration consistent with an infiltrative cardiomyopathy (amyloidosis suspected).</li>
-          </ul>
-        </div>
-        <div class="col-2">
-          <h3 style="margin:0 0 6px 0; font-size:16px; color:var(--maroon)">Pleural fluid & Labs</h3>
-          <ul>
-            <li>Pleural fluid: repeated taps — non-diagnostic cytology; cultures/ADA not suggestive of TB.</li>
-            <li>Serum/urine protein electrophoresis ± immunofixation; serum free light chains recommended.</li>
-            <li>Tissue biopsy (fat pad/pleura/endomyocardial): Congo red &amp; apple‑green birefringence confirms amyloid.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        function updateNavigation() {
+            document.querySelectorAll('.nav-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index + 1 === currentSlide);
+            });
+        }
 
-    <!-- Differential -->
-    <section class="card" id="differential">
-      <h2><span class="icon" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <circle cx="12" cy="8" r="3" stroke="#4E2F3D" stroke-width="1.4"/><path d="M5 20c1-3 4-5 7-5s6 2 7 5" stroke="#D2C3A9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Differential Diagnosis</h2>
-      <div class="grid-3" style="margin-top:12px;">
-        <div class="card small"><strong>1.</strong> Malignancy-related effusion</div>
-        <div class="card small"><strong>2.</strong> Tuberculous pleural effusion</div>
-        <div class="card small"><strong>3.</strong> Heart failure–related effusion</div>
-        <div class="card small"><strong>4.</strong> Pulmonary embolism</div>
-        <div class="card small"><strong>5.</strong> <span style="color:var(--maroon); font-weight:700">Systemic amyloidosis</span></div>
-      </div>
-    </section>
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') {
+                e.preventDefault();
+                if (currentSlide < totalSlides) {
+                    goToSlide(currentSlide + 1);
+                }
+            } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                e.preventDefault();
+                if (currentSlide > 1) {
+                    goToSlide(currentSlide - 1);
+                }
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                goToSlide(1);
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                goToSlide(totalSlides);
+            }
+        });
 
-    <!-- Discussion -->
-    <section class="card" id="discussion">
-      <h2><span class="icon" aria-hidden="true"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M20.8 7.3a4.6 4.6 0 0 0-7.1 0L12 8.9l-1.7-1.6a4.6 4.6 0 0 0-7.1 0 4.1 4.1 0 0 0 0 5.7L12 21l8.8-8a4.1 4.1 0 0 0 0-5.7z" stroke="#4E2F3D" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#D2C3A9" fill-opacity="0.06"/>
-</svg></span>Discussion</h2>
-      <p><strong>Diagnostic reasoning:</strong> Initial pre-test probability favored malignancy given weight loss and bilateral effusion, but repeated non-diagnostic cytology and lack of mass on HRCT redirected the workup. Echocardiography and cardiac MRI were decisive in identifying an infiltrative process and prioritized amyloidosis-specific testing.</p>
-      <p><strong>Mechanisms:</strong> Effusions in amyloidosis arise from pleural infiltration, impaired lymphatic drainage, myocardial dysfunction causing elevated venous pressures, or hypoalbuminemia.</p>
-      <p><strong>Clinical implication:</strong> Early identification of cardiac involvement (via MRI/echo) alters prognosis and treatment strategies; typing the amyloid (AL vs ATTR) is essential for therapy selection.</p>
-    </section>
+        // Update navigation on scroll
+        function updateNavigationOnScroll() {
+            const slides = document.querySelectorAll('.slide');
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            
+            slides.forEach((slide, index) => {
+                const slideTop = slide.offsetTop;
+                const slideBottom = slideTop + slide.offsetHeight;
+                
+                if (scrollPosition >= slideTop && scrollPosition <= slideBottom) {
+                    currentSlide = index + 1;
+                    updateNavigation();
+                }
+            });
+        }
 
-    <!-- Conclusion -->
-    <section class="card" id="conclusion">
-      <h2>Conclusion</h2>
-      <p><span class="hl">Not every bilateral effusion is TB or malignancy.</span> In afebrile, persistent bilateral pleural effusions with inconclusive cytology, systemic amyloidosis should be actively considered. An imaging-led, multidisciplinary approach prevents diagnostic delay and enables targeted therapy planning.</p>
-    </section>
-
-    <!-- Learning points -->
-    <section class="card" id="learning">
-      <h2>Learning Points</h2>
-      <ul>
-        <li>Consider infiltrative systemic disease in recurrent, afebrile bilateral pleural effusions.</li>
-        <li>Cardiac MRI is high-yield when echocardiography suggests restrictive physiology.</li>
-        <li>Tissue diagnosis (Congo red) remains the gold standard for amyloid detection.</li>
-        <li>Coordinate early multidisciplinary input (Respiratory, Cardiology, Pathology).</li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
-    <div style="max-width:1100px; margin:0 auto; padding:20px; color:var(--muted);">
-      <div style="font-weight:600; color:var(--maroon)">Dr. Akshita Khare — MD (Respiratory Medicine), 2nd Year Resident</div>
-      <div style="margin-top:6px">Department of Respiratory Medicine & Tuberculosis, SAIMS, Indore • Email: <a href="mailto:akhare13@gmail.com">akhare13@gmail.com</a></div>
-      <div style="margin-top:8px; font-size:13px;">© August 25, 2025 — Prepared for presentation at a medical conference. Patient identifiers removed; institutional consent obtained where applicable.</div>
-    </div>
-  </footer>
+        window.addEventListener('scroll', updateNavigationOnScroll);
+        
+        // Initial navigation update
+        updateNavigation();
+    </script>
 </body>
 </html>
